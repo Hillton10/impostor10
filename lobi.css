@@ -1,0 +1,120 @@
+/* Heredamos la fuente y el fondo de menu.css */
+
+.lobi-container {
+    width: 90%;
+    max-width: 500px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Permite scroll si hay muchos jugadores */
+    padding-bottom: 100px;
+}
+
+.lobi-nav-title {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+/* Título con el mismo resplandor que el menú */
+.lobi-title {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-shadow: 0 0 15px rgba(100, 200, 255, 0.6);
+}
+
+/* Panel de Impostores estilo "Card" */
+.impostor-panel {
+    background: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.counter-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.imp-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#impCount {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00d4ff; /* Azul neón */
+}
+
+/* Grid de Jugadores */
+.player-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.player {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.player.selected {
+    border-color: #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+.player img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.player span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Botones adaptados */
+.add-btn {
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    margin-bottom: 5px;
+}
+
+.main-btn {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Ajuste para móviles pequeños */
+@media (max-width: 380px) {
+    .player-list {
+        grid-template-columns: 1fr;
+    }
+}

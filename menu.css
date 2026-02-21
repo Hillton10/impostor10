@@ -1,0 +1,114 @@
+/* Importar fuente similar a la de la imagen */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+body.menu-body {
+    background-color: #000; /* Fondo negro puro */
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* Efecto de fondo de circuitos (opcional) */
+    background-image: radial-gradient(circle at center, #001a1a 0%, #000 100%);
+}
+
+/* Header */
+.top-bar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.discord-badge {
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título con resplandor azul */
+.menu-title {
+    font-size: 4rem;
+    margin-top: 20px;
+    text-transform: capitalize;
+    text-shadow: 0 0 20px rgba(100, 200, 255, 0.8); /* El efecto neón */
+}
+
+/* Avatar */
+.avatar-container {
+    margin: 30px 0;
+}
+
+.avatar-img {
+    width: 150px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+
+.user-info {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+/* Botones estilo iOS / Minimalista */
+.actions {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-btn.main-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-btn.main-btn:active {
+    transform: scale(0.95);
+    background-color: #e0e0e0;
+}
+
+/* Barra inferior */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.8rem;
+    color: #555;
+}
+.discord-badge {
+    cursor: pointer; /* hace que el cursor cambie */
+}
+.bottom-bar i.active {
+    color: #fff;
+}

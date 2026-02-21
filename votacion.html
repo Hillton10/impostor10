@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votación - Impostor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="votacion.css">
+    <script src="secretas.js" defer></script>
+    <script src="votacion.js" defer></script>
+</head>
+<body class="menu-body">
+
+    <header class="top-bar">
+        <i class="fas fa-gavel"></i>
+        <span class="lobi-nav-title">SALA DE JUICIO</span>
+        <i class="fas fa-bullhorn"></i>
+    </header>
+
+    <main class="votacion-container">
+        <h1 class="votacion-title">VOTACIÓN</h1>
+
+        <div id="votes" class="votes-list">
+            </div>
+
+        <div class="actions">
+            <button id="voteBtn" class="menu-btn main-btn">
+                Confirmar Voto <i class="fas fa-check-circle"></i>
+            </button>
+        </div>
+
+        <div id="result" class="votacion-result" style="display:none">
+            <div class="result-card">
+                <h2 id="resultText"></h2>
+                
+                <p class="impostor-label">IMPOSTORES IDENTIFICADOS:</p>
+                <div id="impostorList" class="impostor-list"></div>
+
+                <div class="result-actions">
+                    <button id="lobbyBtn" class="menu-btn secondary-btn">Lobby</button>
+                    <button id="restartBtn" class="menu-btn main-btn">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bottom-bar">
+
+    </footer>
+
+</body>
+</html>

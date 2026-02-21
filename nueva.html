@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Partida - Impostor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="lobi.css"> 
+
+    <script src="secretas.js" defer></script>
+    <script src="nueva.js" defer></script>
+</head>
+<body class="menu-body">
+
+    <header class="top-bar">
+        <i class="fas fa-chevron-left" onclick="location.href='menu.html'"></i>
+        <span class="lobi-nav-title">CONFIGURACIÓN</span>
+        <i class="fas fa-gear"></i>
+    </header>
+
+    <main class="lobi-container">
+        <h1 class="lobi-title">Nueva Partida</h1>
+
+        <div class="impostor-panel">
+            <span>Impostores</span>
+            <div class="counter-control">
+                <button class="imp-btn" onclick="decreaseImpostor()">-</button>
+                <span id="impCount">1</span>
+                <button class="imp-btn" onclick="addImpostor()">+</button>
+            </div>
+        </div>
+
+        <div id="playerList" class="player-list">
+            </div>
+
+        <div class="actions">
+            <button class="menu-btn add-btn" onclick="addPlayer()">
+                Agregar Jugador <i class="fas fa-plus"></i>
+            </button>
+            <button class="menu-btn main-btn" onclick="continueGame()">
+                Continuar <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </main>
+
+    <footer class="bottom-bar">
+
+    </footer>
+
+</body>
+</html>

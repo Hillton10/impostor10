@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revelar Rol - Impostor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="palabra.css">
+    <script src="palabra.js" defer></script>
+</head>
+<body class="menu-body">
+
+    <header class="top-bar">
+        <i class="fas fa-fingerprint"></i>
+        <span class="lobi-nav-title">IDENTIFICACIÓN</span>
+        <i class="fas fa-shield-halved"></i>
+    </header>
+
+    <main class="palabra-container">
+        
+        <div class="player-card">
+            <div class="player-avatar">
+                <img id="avatar" src="" alt="Avatar">
+            </div>
+            <h2 id="name" class="player-name">Cargando...</h2>
+        </div>
+
+        <div class="reveal-zone">
+            <div id="swipeBox" class="swipe-box">
+                <i class="fas fa-eye-slash"></i>
+                <span>Mantén presionado para revelar</span>
+            </div>
+
+            <h3 id="secret" class="secret-text"></h3>
+        </div>
+
+        <div id="countdown" class="countdown" style="display:none;">30</div>
+
+        <div class="actions">
+            <button id="nextBtn" class="menu-btn main-btn">
+                Siguiente <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="bottom-bar">
+
+    </footer>
+
+</body>
+</html>
