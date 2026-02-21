@@ -1,15 +1,16 @@
 .palabra-container {
     width: 90%;
     max-width: 400px;
+    margin: 0 auto;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
+    min-height: 70vh;
 }
 
-/* Tarjeta del jugador con Glassmorphism */
 .player-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -18,108 +19,79 @@
     width: 100%;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .player-avatar img {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 3px solid #00d4ff;
-    padding: 5px;
+    padding: 4px;
     object-fit: cover;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.4));
 }
 
 .player-name {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #fff;
-    letter-spacing: 1px;
+    font-weight: 700;
 }
 
-/* Caja de Revelado interactiva */
 .reveal-zone {
     width: 100%;
     position: relative;
-    min-height: 120px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
 .swipe-box {
+    position: absolute;
     width: 100%;
     height: 100px;
-    background: #fff; /* Blanco puro como tus botones */
+    background: #ffffff;
     color: #000;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 2;
+    z-index: 10;
+    font-weight: 800;
+    cursor: grab;
+    touch-action: none; 
+    user-select: none;
+    will-change: transform, opacity; /* Optimización GPU */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-.swipe-box i {
-    font-size: 1.5rem;
-}
-
-.swipe-box:active {
-    transform: scale(0.92);
-    opacity: 0; /* Desaparece para mostrar la palabra debajo */
-    pointer-events: none;
-}
-
-/* Texto secreto con efecto Neón Azul */
 .secret-text {
     position: absolute;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #00d4ff;
-    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8),
-                 0 0 40px rgba(0, 212, 255, 0.4);
-    text-transform: uppercase;
     z-index: 1;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #00d4ff;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
     text-align: center;
+    width: 100%;
+    pointer-events: none; /* No bloquea el swipe */
+    display: none;
 }
 
-/* Contador de tiempo */
 .countdown {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ff4757; /* Rojo para urgencia */
-    text-shadow: 0 0 15px rgba(255, 71, 87, 0.5);
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ff4757;
+    text-shadow: 0 0 20px rgba(255, 71, 87, 0.4);
     animation: heartbeat 1s infinite;
 }
 
 @keyframes heartbeat {
-    0% { transform: scale(1); }
-    10% { transform: scale(1.1); }
-    20% { transform: scale(1); }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
-/* Botón Siguiente */
-.actions {
-    width: 100%;
-}
-
-/* Animación de entrada para los elementos */
-.player-card, .reveal-zone, .actions {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+.actions { width: 100%; }
