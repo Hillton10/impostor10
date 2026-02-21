@@ -22,7 +22,7 @@ function render() {
     const div = document.createElement("div");
     div.className = "player selected";
     div.innerHTML = `
-      <img src="img/def.jpg">
+      <img src="def.jpg">
       <span>${p.name}</span>
     `;
     list.appendChild(div);
@@ -38,7 +38,7 @@ function addPlayer() {
 
   players.push({
     name,
-    img: "img/def.jpg",
+    img: "def.jpg",
     selected: true
   });
 
@@ -87,4 +87,5 @@ function continueGame() {
   }));
 
   location.href = "palabra.html";
+
 }
